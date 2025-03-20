@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/delivery-manager',
-  assetPrefix: '/delivery-manager/',
+  basePath: '',
+  assetPrefix: '',
   images: {
     unoptimized: true,
   },

@@ -1,25 +1,18 @@
-import { ReactNode } from 'react';
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
 import './globals.css';
+import { Inter } from 'next/font/google';
+import type { Metadata } from 'next';
 
-interface LayoutProps {
-  children: ReactNode;
-}
+const inter = Inter({ subsets: ['latin'] });
 
-export default function Layout({ children }: LayoutProps) {
+export const metadata: Metadata = {
+  title: 'Delivery Manager',
+  description: 'Sistema de gerenciamento de pedidos de entrega',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
-      <head />
-      <body>
-        <div className="flex flex-col min-h-screen bg-gray-50">
-          <Header />
-          <main className="flex-grow py-6">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">{children}</div>
-          </main>
-          <Footer />
-        </div>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

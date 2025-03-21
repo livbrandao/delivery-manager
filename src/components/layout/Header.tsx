@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { MdHome } from 'react-icons/md';
+import { HiOutlineTicket } from 'react-icons/hi';
 
 const Header: React.FC = () => {
   return (
@@ -25,7 +27,7 @@ const Header: React.FC = () => {
                 href="/"
                 className="border-purple-400 text-purple-950 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium uppercase hover:text-purple-700"
               >
-                home
+                <MdHome className="mr-2" /> home
               </Link>
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
@@ -33,7 +35,7 @@ const Header: React.FC = () => {
                 href="/pedidos"
                 className="border-purple-400 text-purple-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium uppercase"
               >
-                Pedidos
+                <HiOutlineTicket className="mr-2" /> Pedidos
               </Link>
             </div>
           </div>

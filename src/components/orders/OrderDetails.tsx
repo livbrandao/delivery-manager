@@ -7,6 +7,7 @@ import Button from '../common/Button';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import { HiArrowLeft } from 'react-icons/hi';
 
 interface OrderDetailsProps {
   order: Order | null;
@@ -33,6 +34,14 @@ const OrderDetails: React.FC<OrderDetailsProps> = ({ order }) => {
   return (
     <div className="space-y-6 my-10 py-16">
       <div className="flex flex-col justify-start items-start">
+        <button
+          onClick={() => router.back()}
+          className="flex items-center space-x-2 cursor-pointer text-zinc-400 hover:text-zinc-600 border-none mb-8"
+        >
+          <HiArrowLeft size={20} className="mr-2" />
+          Voltar
+        </button>
+
         <div className="flex items-center space-x-4">
           <h1 className="text-2xl font-bold text-purple-900">Pedido #{order.id}</h1>
           <StatusBadge status={order.status} />
@@ -44,10 +53,10 @@ const OrderDetails: React.FC<OrderDetailsProps> = ({ order }) => {
         <h2 className="text-lg font-medium text-purple-900">Informações do Cliente</h2>
         <div className="mt-4">
           <p>
-            <span className="font-medium">Nome:</span> {order.customer.name}
+            <span className="font-medium text-purple-500">Nome:</span> {order.customer.name}
           </p>
           <p>
-            <span className="font-medium">Endereço:</span> {order.customer.address}
+            <span className="font-medium text-purple-500">Endereço:</span> {order.customer.address}
           </p>
         </div>
       </Card>
@@ -158,12 +167,6 @@ const OrderDetails: React.FC<OrderDetailsProps> = ({ order }) => {
           </div>
         </div>
       </Card>
-
-      <div className="flex justify-end">
-        <Button variant="outline" onClick={() => router.back()}>
-          Voltar para a lista
-        </Button>
-      </div>
     </div>
   );
 };

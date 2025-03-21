@@ -1,7 +1,6 @@
 'use client';
 
 import Button from '@/components/common/Button';
-import Layout from '@/components/layout/Layout';
 import Link from 'next/link';
 
 export default function HomePage() {

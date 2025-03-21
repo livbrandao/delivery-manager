@@ -1,35 +1,22 @@
+'use client';
+
 import React from 'react';
-import { Order } from '../../types/Order';
+import { useRouter } from 'next/navigation';
+import Button from '@/components/common/Button';
+import { Order } from '@/types/Order';
+import { HiArrowLeft } from 'react-icons/hi';
+import { formatCurrency, formatDate } from '@/utils/formatters';
 import Card from '../common/Card';
 import StatusBadge from '../common/StatusBadge';
-import { formatCurrency, formatDate } from '../../utils/formatters';
-import Button from '../common/Button';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
 import Image from 'next/image';
-import { HiArrowLeft } from 'react-icons/hi';
 
 interface OrderDetailsProps {
-  order: Order | null;
+  order: Order;
 }
 
-const OrderDetails: React.FC<OrderDetailsProps> = ({ order }) => {
+// This is now simplified to just handle displaying the order
+export function OrderDetails({ order }: OrderDetailsProps) {
   const router = useRouter();
-
-  if (!order) {
-    return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-purple-100 text-center">
-        <h1 className="text-4xl font-bold text-purple-900">Desculpe! :/</h1>
-        <p className="text-lg text-purple-600 mt-2">Detalhes do pedido não disponíveis</p>
-
-        <Link href="/pedidos">
-          <Button variant="outline" className="mt-6">
-            Voltar
-          </Button>
-        </Link>
-      </div>
-    );
-  }
 
   return (
     <div className="space-y-6 my-10 py-16">
@@ -169,6 +156,6 @@ const OrderDetails: React.FC<OrderDetailsProps> = ({ order }) => {
       </Card>
     </div>
   );
-};
+}
 
 export default OrderDetails;

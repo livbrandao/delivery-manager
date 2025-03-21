@@ -12,7 +12,7 @@ interface OrderCardProps {
 
 const OrderCard: React.FC<OrderCardProps> = ({ order }) => {
   return (
-    <Link href={`/pedidos/detalhes/${order.id}`} className="block">
+    <Link href={`/detalhes/${order.id}`} className="block">
       <Card className="hover:shadow-2xl hover:shadow-purple-300 transition-shadow duration-300">
         <div className="flex justify-between items-start">
           <div>

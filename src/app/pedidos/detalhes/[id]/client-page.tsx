@@ -7,6 +7,7 @@ import Spinner from '@/components/common/Spinner';
 import OrderDetails from '@/components/orders/OrderDetails';
 import { Order } from '@/types/Order';
 import { getOrderById } from '@/utils/api';
+import { HiArrowLeft } from 'react-icons/hi';
 
 interface ClientOrderDetailsPageProps {
   id: string;
@@ -58,8 +59,12 @@ export default function ClientOrderDetailsPage({ id }: ClientOrderDetailsPagePro
       <div className="bg-white p-6 rounded-lg shadow-md">
         <h1 className="text-xl font-medium text-red-600 mb-4">Erro</h1>
         <p className="text-purple-700 mb-6">{error}</p>
-        <Button variant="primary" onClick={() => router.push('/pedidos')}>
-          Voltar para a lista de pedidos
+        <Button
+          onClick={() => router.push('/pedidos')}
+          variant="primary"
+          className="flex items-center space-x-2 "
+        >
+          <HiArrowLeft size={20} className="mr-2" /> Voltar para a lista de pedidos
         </Button>
       </div>
     );

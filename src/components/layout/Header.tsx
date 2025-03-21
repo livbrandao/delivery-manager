@@ -19,7 +19,10 @@ const Header: React.FC = () => {
                 height={40}
                 unoptimized={true}
               />
-              <span className="text-xl font-bold text-purple-950 ml-4"> Delivery Manager</span>
+              <span className="text-base md:text-xl font-bold text-purple-950 ml-4">
+                {' '}
+                Delivery Manager
+              </span>
             </Link>
           </div>
           <div className="flex">

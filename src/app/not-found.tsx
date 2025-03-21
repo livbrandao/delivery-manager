@@ -6,8 +6,8 @@ export default function NotFound() {
     <Layout>
       <div className="min-h-[70vh] flex flex-col items-center justify-center">
         <h1 className="text-6xl font-bold text-blue-600 mb-4">404</h1>
-        <h2 className="text-2xl font-semibold text-gray-800 mb-6">Página não encontrada</h2>
-        <p className="text-gray-600 mb-8">
+        <h2 className="text-2xl font-semibold text-purple-800 mb-6">Página não encontrada</h2>
+        <p className="text-purple-600 mb-8">
           A página que você está procurando não existe ou foi removida.
         </p>
         <Link

@@ -26,7 +26,7 @@ const Input: React.FC<InputProps> = ({
   return (
     <div className={`mb-4 ${className}`}>
       {label && (
-        <label htmlFor={id || name} className="block text-sm font-medium text-gray-700 mb-1">
+        <label htmlFor={id || name} className="block text-sm font-medium text-purple-700 mb-1">
           {label}
         </label>
       )}
@@ -38,7 +38,7 @@ const Input: React.FC<InputProps> = ({
         onChange={onChange}
         placeholder={placeholder}
         className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-          error ? 'border-red-500' : 'border-gray-300'
+          error ? 'border-red-500' : 'border-purple-300'
         }`}
       />
       {error && <p className="mt-1 text-sm text-red-600">{error}</p>}

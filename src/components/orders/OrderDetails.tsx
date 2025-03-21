@@ -5,22 +5,39 @@ import StatusBadge from '../common/StatusBadge';
 import { formatCurrency, formatDate } from '../../utils/formatters';
 import Button from '../common/Button';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import Image from 'next/image';
 
 interface OrderDetailsProps {
-  order: Order;
+  order: Order | null;
 }
 
 const OrderDetails: React.FC<OrderDetailsProps> = ({ order }) => {
   const router = useRouter();
 
+  if (!order) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen bg-purple-100 text-center">
+        <h1 className="text-4xl font-bold text-purple-900">Desculpe! :/</h1>
+        <p className="text-lg text-purple-600 mt-2">Detalhes do pedido não disponíveis</p>
+
+        <Link href="/pedidos">
+          <Button variant="outline" className="mt-6">
+            Voltar
+          </Button>
+        </Link>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-6 my-10 py-16">
-      <div className="flex justify-between items-center">
-        <div>
+      <div className="flex flex-col justify-start items-start">
+        <div className="flex items-center space-x-4">
           <h1 className="text-2xl font-bold text-purple-900">Pedido #{order.id}</h1>
-          <p className="mt-1 text-sm text-purple-500">ID único: {order.uuid}</p>
+          <StatusBadge status={order.status} />
         </div>
-        <StatusBadge status={order.status} className="text-sm" />
+        <p className="mt-1 text-sm text-purple-500">ID único: {order.uuid}</p>
       </div>
 
       <Card>
@@ -91,7 +108,13 @@ const OrderDetails: React.FC<OrderDetailsProps> = ({ order }) => {
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
                       <div className="flex-shrink-0 h-10 w-10">
-                        <img className="h-10 w-10 rounded-md" src={item.imagem} alt={item.name} />
+                        <Image
+                          width={40}
+                          height={40}
+                          className="rounded-md"
+                          src={item.imagem}
+                          alt={item.name}
+                        />
                       </div>
                       <div className="ml-4">
                         <div className="text-sm font-medium text-purple-900">{item.name}</div>

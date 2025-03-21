@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Header: React.FC = () => {
   return (
@@ -8,10 +9,12 @@ const Header: React.FC = () => {
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center decoration-none border-none">
-              <img
+              <Image
                 className="h-10 w-10"
                 src="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/jvedziujtyxkyqg8fufr"
                 alt="logo-hunii"
+                width={40}
+                height={40}
               />
               <span className="text-xl font-bold text-purple-950 ml-4"> Delivery Manager</span>
             </Link>

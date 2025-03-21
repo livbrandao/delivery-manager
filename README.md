@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Delivery Manager 🚚📦
 
-## Getting Started
+Um projeto **React.js & Next.js** para gerenciar pedidos de entrega. O objetivo do case é construir uma interface para exibir uma lista de pedidos e permitir que os usuários filtrem e visualizem detalhes de cada pedido. 😃✨
 
-First, run the development server:
+## Sobre o Projeto 📋
+
+O **Delivery Manager** foi criado com [Next.js](https://nextjs.org/) e **TypeScript** para oferecer uma base robusta e escalável para gerenciamento de entregas.  
+Este projeto segue boas práticas de desenvolvimento, com ênfase na componentização, tratamento de erros e carregamento assíncrono, garantindo uma ótima experiência para o usuário final. 🚀
+
+## Tecnologias Utilizadas 🛠️
+
+### Frameworks e Bibliotecas
+
+- **Next.js** (v15.2.3) – Framework React para renderização do lado do servidor e geração de sites estáticos. ⚡
+- **React** (v19.0.0) & **React DOM** – Biblioteca para construção de interfaces de usuário. ⚛️
+- **React Router DOM** (v7.3.0) – Gerenciamento de rotas na aplicação. 🛣️
+- **React Icons** (v5.5.0) – Ícones prontos para uso na interface.
+
+### Estilização e Utilitários
+
+- **Tailwind CSS** (v4.0.14) – Framework utilitário para estilização rápida e responsiva. 🎨
+- **PostCSS** (v8.5.3) & **Autoprefixer** (v10.4.21) – Processamento e otimização dos estilos CSS.
+
+### Desenvolvimento e Qualidade de Código
+
+- **TypeScript** (v5) – Superset do JavaScript com tipagem estática para maior robustez. 🔒
+- **ESLint** (v9.22.0) com configurações específicas para Next.js e React – Garantia de padrões de código e melhores práticas. ✅
+- **Prettier** (v3.5.3) – Formatação automática do código para manter a consistência. 💅
+
+## Funcionalidades 🌟
+
+- **Desenvolvimento Moderno**: Utilização de Next.js e TypeScript para maior performance e escalabilidade. ⚡
+- **Interface Intuitiva**: Layout limpo e responsivo que melhora a experiência do usuário. 🖥️📱
+- **Organização e Componentização**: Estrutura modular que facilita a manutenção e evolução do código. 🛠️
+- **Tratamento de Erros**: Mecanismos de captura de erros e feedbacks amigáveis para o usuário. 🔄
+- **Carregamento Assíncrono**: Uso de async/await e Promises para operações sem travar a aplicação. ⏱️
+
+## Como executar o proejto ⚙️
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone este repositório
+$ git clone https://github.com/livbrandao/delivery-manager.git
+
+# Acesse a pasta do projeto no terminal
+$ cd devsStage-event
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run dev
+
+# Abra o navegador em [http://localhost:3000](http://localhost:3000) e veja a aplicação em ação! 🌐
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Estrutura do Projeto 🗂️
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```plaintext
+src/
+  app/
+    layout.tsx       # Layout global
+    page.tsx         # Página inicial ("/")
+    not-found.tsx    # Página de erro
+    globals.css      # Estilos globais
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    pedidos/
+      page.tsx       # Página de listagem de pedidos
+      detalhes/
+        [id]/        # Detalhes do pedido por ID
 
-## Learn More
+  assets/           # Arquivos estáticos (imagens, fontes, etc.)
 
-To learn more about Next.js, take a look at the following resources:
+  components/
+    common/
+      Button.tsx       # Componente de botão
+      Card.tsx         # Componente de cartão
+      Input.tsx        # Componente de input
+      Select.tsx       # Componente de seleção
+      Spinner.tsx      # Indicador de carregamento
+      StatusBadge.tsx  # Indicador de status
+    layout/
+      Header.tsx       # Cabeçalho da aplicação
+      Footer.tsx       # Rodapé da aplicação
+      Layout.tsx       # Layout padrão da aplicação
+    orders/
+      OrderCard.tsx      # Cartão para exibir resumo do pedido
+      OrderDetails.tsx   # Detalhes do pedido
+      OrderFilters.tsx   # Filtros para listagem de pedidos
+      OrderList.tsx      # Lista de pedidos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  hooks/
+    useOrders.ts       # Hook para gerenciamento de pedidos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  types/
+    Order.ts           # Tipos e interfaces relacionados aos pedidos
 
-## Deploy on Vercel
+  utils/
+    api.ts             # Configurações e chamadas à API
+    formatters.ts      # Funções de formatação de dados
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  mockData.ts          # Dados fictícios para simular API
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+##
+
+Feito com ❤️ por [livbrandao](https://github.com/livbrandao) e a comunidade de colaboradores! 🎉
+
+---
+
+Este README foi pensado para ser claro, objetivo e acolhedor para usuários. 😊

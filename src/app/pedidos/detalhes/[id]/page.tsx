@@ -1,15 +1,15 @@
-import { mockOrders } from '@/mockData';
 import ClientOrderDetailsPage from './client-page';
+import { mockOrders } from '@/mockData';
 
-// Função OBRIGATÓRIA para gerar as rotas dinâmicas na build
+export default function OrderDetailsPage({ params }: { params: { id: string } }) {
+  return <ClientOrderDetailsPage id={params.id} />;
+}
+
+// Função OBRIGATÓRIA para geração de páginas estáticas no build
 export async function generateStaticParams() {
   return (
     mockOrders?.orders?.map((order) => ({
       id: order.id.toString(),
     })) || []
   );
-}
-
-export default function OrderDetailsPage({ params }: { params: { id: string } }) {
-  return <ClientOrderDetailsPage id={params.id} />;
 }

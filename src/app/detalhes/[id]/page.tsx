@@ -6,22 +6,32 @@ import { mockOrders } from '@/mockData';
 export default async function OrderDetailsPage({
   params,
 }: {
-  params: Promise<{ id: string }> | { id: string };
+  params: { id: string } | Promise<{ id: string }>;
 }) {
-  // Aguarda a resolução de params antes de acessar id
-  const resolvedParams = await params;
+  // Aguarda a resolução de params
+  const resolvedParams = await Promise.resolve(params);
+
+  // Pega o id após a resolução
   const id = resolvedParams.id;
 
-  // Usa o id resolvido
+  // Verifica o é id válido
+  if (!id) {
+    notFound();
+  }
+
+  // Busca os dados do pedido com o id
   const order = await getOrderById(id);
 
+  // Pedido não encontrado
   if (!order) {
     notFound();
   }
 
+  // Renderiza usando os dados do pedido
   return <OrderDetails order={order} />;
 }
 
+// Gera página estática na build
 export async function generateStaticParams() {
   return (
     mockOrders?.orders?.map((order) => ({

@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import Button from '@/components/common/Button';
 import { Order } from '@/types/Order';
 import { HiArrowLeft } from 'react-icons/hi';
 import { formatCurrency, formatDate } from '@/utils/formatters';
@@ -14,7 +13,6 @@ interface OrderDetailsProps {
   order: Order;
 }
 
-// This is now simplified to just handle displaying the order
 export function OrderDetails({ order }: OrderDetailsProps) {
   const router = useRouter();
 

@@ -16,7 +16,8 @@ export const mockOrders: OrdersResponse = {
       },
       items: [
         {
-          imagem: 'https://via.placeholder.com/150',
+          imagem:
+            'https://png.pngtree.com/png-clipart/20190630/original/pngtree-vector-phone-cell-icon-png-image_4163899.jpg',
           name: 'Celular XYZ',
           quantity: 1,
           price: 120.5,
@@ -37,7 +38,8 @@ export const mockOrders: OrdersResponse = {
       },
       items: [
         {
-          imagem: 'https://via.placeholder.com/150',
+          imagem:
+            'https://img.freepik.com/vetores-premium/icone-de-fones-de-ouvido-no-fundo-branco-elemento-para-emblema-distintivo-sinal-ilustracao_124137-1172.jpg',
           name: 'Fone de Ouvido ABC',
           quantity: 1,
           price: 72.3,
@@ -58,7 +60,7 @@ export const mockOrders: OrdersResponse = {
       },
       items: [
         {
-          imagem: 'https://via.placeholder.com/150',
+          imagem: 'https://cdn-icons-png.flaticon.com/512/3616/3616856.png',
           name: 'Tablet Pro',
           quantity: 1,
           price: 250.75,
@@ -79,7 +81,7 @@ export const mockOrders: OrdersResponse = {
       },
       items: [
         {
-          imagem: 'https://via.placeholder.com/150',
+          imagem: 'https://th.bing.com/th/id/OIP.PJCXxYfPNiO9mVXJY3JeygHaGo?rs=1&pid=ImgDetMain',
           name: 'Carregador Wireless',
           quantity: 1,
           price: 89.9,
@@ -100,7 +102,7 @@ export const mockOrders: OrdersResponse = {
       },
       items: [
         {
-          imagem: 'https://via.placeholder.com/150',
+          imagem: 'https://www.pngmart.com/files/13/Smartwatch-PNG-File.png',
           name: 'Smartwatch XYZ',
           quantity: 1,
           price: 350.25,

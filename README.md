@@ -50,7 +50,7 @@ $ npm install
 # Execute a aplicação em modo de desenvolvimento
 $ npm run dev
 
-# Abra o navegador em [http://localhost:3000](http://localhost:3000) e veja a aplicação em ação! 🌐
+# Abra o navegador em [http://localhost:3000] e veja a aplicação em ação! 🌐
 ```
 
 ## Estrutura do Projeto 🗂️
@@ -65,8 +65,9 @@ src/
 
     pedidos/
       page.tsx       # Página de listagem de pedidos
-      detalhes/
-        [id]/        # Detalhes do pedido por ID
+    detalhes/
+        [id]/
+          page.tsx  # Detalhes do pedido por ID
 
   assets/           # Arquivos estáticos (imagens, fontes, etc.)
 
@@ -84,6 +85,7 @@ src/
       Layout.tsx       # Layout padrão da aplicação
     orders/
       OrderCard.tsx      # Cartão para exibir resumo do pedido
+      OrderClient.tsx    # Lógica para renderizar a página de detalhes
       OrderDetails.tsx   # Detalhes do pedido
       OrderFilters.tsx   # Filtros para listagem de pedidos
       OrderList.tsx      # Lista de pedidos

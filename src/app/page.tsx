@@ -1,36 +1,22 @@
 'use client';
 
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import OrderList from '../components/orders/OrderList';
-import OrderFilters from '../components/orders/OrderFilters';
-import { useOrders } from '../hooks/useOrders';
+import Button from '@/components/common/Button';
+import Layout from '@/components/layout/Layout';
+import Link from 'next/link';
 
-export default function Home() {
-  const { orders, loading, error, customerName, setCustomerName, status, setStatus, resetFilters } =
-    useOrders();
-
+export default function HomePage() {
   return (
-    <Layout>
-      <div className="space-y-6">
-        <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-900">Pedidos</h1>
-        </div>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-purple-100 text-center">
+      <h1 className="text-4xl font-bold text-purple-900">Bem-vindo ao Delivery Manager</h1>
+      <p className="text-lg text-purple-600 mt-2">
+        Gerencie seus pedidos de forma rápida e eficiente.
+      </p>
 
-        <OrderFilters
-          customerName={customerName}
-          setCustomerName={setCustomerName}
-          status={status}
-          setStatus={setStatus}
-          resetFilters={resetFilters}
-        />
-
-        {error && (
-          <div className="bg-red-50 border border-red-200 text-red-800 p-4 rounded-md">{error}</div>
-        )}
-
-        <OrderList orders={orders} loading={loading} />
-      </div>
-    </Layout>
+      <Link href="/pedidos">
+        <Button variant="secondary" className="mt-6">
+          Ver Lista de Pedidos
+        </Button>
+      </Link>
+    </div>
   );
 }

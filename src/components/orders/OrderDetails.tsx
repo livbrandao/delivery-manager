@@ -108,6 +108,7 @@ export function OrderDetails({ order }: OrderDetailsProps) {
                           className="rounded-md"
                           src={item.imagem}
                           alt={item.name}
+                          unoptimized={true}
                         />
                       </div>
                       <div className="ml-4">

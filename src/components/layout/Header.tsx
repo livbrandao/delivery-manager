@@ -17,6 +17,7 @@ const Header: React.FC = () => {
                 alt="logo-hunii"
                 width={40}
                 height={40}
+                unoptimized={true}
               />
               <span className="text-xl font-bold text-purple-950 ml-4"> Delivery Manager</span>
             </Link>

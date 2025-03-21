@@ -33,7 +33,7 @@ const Header: React.FC = () => {
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               <Link
                 href="/pedidos"
-                className="border-purple-400 text-purple-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium uppercase"
+                className="border-purple-400 text-purple-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium uppercase hover:text-purple-700"
               >
                 <HiOutlineTicket className="mr-2" /> Pedidos
               </Link>
